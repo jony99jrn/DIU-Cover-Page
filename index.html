@@ -29,7 +29,7 @@
 
         <div class="input-group full-width">
           <label for="topicName">Topic Name</label>
-          <input type="text" id="topicName" placeholder="e.g. Continuity and Differentiability">
+          <input type="text" id="topicName" placeholder="e.g. Continuity and Differentiability, Polynomial, Inequality, Radial and Exponent">
         </div>
 
         <div class="section-title">Submitted To</div>
@@ -45,7 +45,7 @@
 
         <div class="input-group full-width">
           <label for="teacherDept">Department</label>
-          <input type="text" id="teacherDept" placeholder="e.g. Cse">
+          <input type="text" id="teacherDept" placeholder="e.g. Computer Science and Engineering">
         </div>
 
         <div class="section-title">Submitted By</div>
@@ -71,7 +71,7 @@
 
         <div class="input-group full-width">
           <label for="studentDept">Department</label>
-          <input type="text" id="studentDept" placeholder="e.g. Cse">
+          <input type="text" id="studentDept" placeholder="e.g. CSE">
         </div>
 
         <div class="section-title">Submission Date</div>
@@ -93,56 +93,61 @@
       <button id="downloadBtn" class="primary-btn">Download PDF</button>
     </div>
 
-    <!-- A4 COVER PAGE CANVAS -->
+    <!-- A4 PDF CANVAS CONTAINER -->
     <div id="coverPage">
       
-      <!-- TOP LOGO HEADER -->
-      <div class="header-logo">
-        <img src="Center.svg" alt="DIU Crest" class="top-crest-img">
-        <img src="Top.svg" alt="Daffodil International University" class="top-title-img">
-      </div>
-
-      <div class="assignment-header">ASSIGNMENT</div>
-
-      <!-- COURSE INFO -->
-      <div class="course-info">
-        <p><strong class="label-title">Course Code:</strong> <span id="prevCourseCode">MAT 101</span></p>
-        <p><strong class="label-title">Course Title:</strong> <span id="prevCourseTitle">MATHEMATICS 1</span></p>
-        <p><strong class="label-title">Topic Name:</strong> <span id="prevTopicName">Continuity and Differentiability</span></p>
-      </div>
-
-      <!-- WATERMARK & DETAILS CONTAINER -->
-      <div class="watermark-container">
-        <img src="Center.svg" alt="DIU Watermark" class="watermark-img">
-
-        <!-- SUBMITTED TO -->
-        <div class="submission-block">
-          <h4 class="sub-heading">Submitted To</h4>
-          <p><strong>Name:</strong> <span id="prevTeacherName">Atia Sanjida Talukder</span></p>
-          <p><strong>Designation:</strong> <span id="prevTeacherDesig">Lecturer</span></p>
-          <p><strong>Department of</strong> <span id="prevTeacherDept">Cse</span></p>
-          <p><strong>Daffodil International University</strong></p>
+      <!-- PAGE OUTER BORDER FRAME -->
+      <div id="pageBorder">
+        
+        <!-- TOP LOGO HEADER -->
+        <div class="header-logo">
+          <img src="Center.svg" alt="DIU Crest" class="top-crest-img">
+          <img src="Top.svg" alt="Daffodil International University" class="top-title-img">
         </div>
 
-        <!-- SUBMITTED BY -->
-        <div class="submission-block">
-          <h4 class="sub-heading">Submitted By</h4>
-          <p><strong>Name:</strong> <span id="prevStudentName">Jony Roy</span></p>
-          <p><strong>ID:</strong> <span id="prevStudentId">262-15-952</span></p>
-          <p><strong>Section:</strong> <span id="prevSection">72_J</span></p>
-          <p><strong>Semester:</strong> <span id="prevSemester">Summer 2026</span></p>
-          <p><strong>Department of</strong> <span id="prevStudentDept">Cse</span></p>
-          <p><strong>Daffodil International University</strong></p>
-        </div>
-      </div>
+        <div class="assignment-header">ASSIGNMENT</div>
 
-      <!-- SUBMISSION DATE -->
-      <div class="date-pill-wrapper">
-        <div class="date-pill">
-          <strong>Date of Submission:</strong> <span id="prevSubDate">02/08/2026</span>
+        <!-- COURSE INFO -->
+        <div class="course-info">
+          <p><strong class="label-title">Course Code:</strong> <span id="prevCourseCode">MAT 101</span></p>
+          <p><strong class="label-title">Course Title:</strong> <span id="prevCourseTitle">MATHEMATICS 1</span></p>
+          <p><strong class="label-title">Topic Name:</strong> <span id="prevTopicName">Continuity and Differentiability, Polynomial, Inequality, Radial and Exponent</span></p>
         </div>
-      </div>
 
+        <!-- DETAILS & WATERMARK CONTAINER -->
+        <div class="watermark-container">
+          <!-- CENTERED WATERMARK -->
+          <img src="Center.svg" alt="DIU Watermark" class="watermark-img">
+
+          <!-- SUBMITTED TO -->
+          <div class="submission-block">
+            <h4 class="sub-heading">Submitted To</h4>
+            <p><strong>Name:</strong> <span id="prevTeacherName">Atia Sanjida Talukder</span></p>
+            <p><strong>Designation:</strong> <span id="prevTeacherDesig">Lecturer</span></p>
+            <p><strong>Department of</strong> <span id="prevTeacherDept">Computer Science and Engineering</span></p>
+            <p><strong>Daffodil International University</strong></p>
+          </div>
+
+          <!-- SUBMITTED BY -->
+          <div class="submission-block">
+            <h4 class="sub-heading">Submitted By</h4>
+            <p><strong>Name:</strong> <span id="prevStudentName">Jony Roy</span></p>
+            <p><strong>ID:</strong> <span id="prevStudentId">262-15-952</span></p>
+            <p><strong>Section:</strong> <span id="prevSection">72_J</span></p>
+            <p><strong>Semester:</strong> <span id="prevSemester">Summer 2026</span></p>
+            <p><strong>Department of</strong> <span id="prevStudentDept">CSE</span></p>
+            <p><strong>Daffodil International University</strong></p>
+          </div>
+        </div>
+
+        <!-- SUBMISSION DATE -->
+        <div class="date-pill-wrapper">
+          <div class="date-pill">
+            <strong>Date of Submission:</strong> <span id="prevSubDate">02/08/2026</span>
+          </div>
+        </div>
+
+      </div>
     </div>
   </div>
 
