@@ -1,52 +1,151 @@
-<!-- EXACT COVER PAGE CANVAS -->
-<div id="coverPage">
-  
-  <!-- TOP LOGO HEADER -->
-  <div class="header-logo">
-    <img src="Center.svg" alt="DIU Crest" class="top-crest-img">
-    <img src="Top.svg" alt="Daffodil International University" class="top-title-img">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DIU Cover Page Generator</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+
+  <!-- STEP 1: FORM SCREEN (DEFAULT VISIBLE) -->
+  <div id="formScreen" class="screen-container">
+    <div class="form-card">
+      <h2>DIU Cover Page Generator</h2>
+      <p class="subtitle">Fill in the assignment details to generate your cover page.</p>
+
+      <div class="form-grid">
+        <div class="section-title">Course Information</div>
+        <div class="input-group">
+          <label for="courseCode">Course Code</label>
+          <input type="text" id="courseCode" placeholder="e.g. MAT 101">
+        </div>
+
+        <div class="input-group">
+          <label for="courseTitle">Course Title</label>
+          <input type="text" id="courseTitle" placeholder="e.g. MATHEMATICS 1">
+        </div>
+
+        <div class="input-group full-width">
+          <label for="topicName">Topic Name</label>
+          <input type="text" id="topicName" placeholder="e.g. Continuity and Differentiability">
+        </div>
+
+        <div class="section-title">Submitted To</div>
+        <div class="input-group">
+          <label for="teacherName">Teacher Name</label>
+          <input type="text" id="teacherName" placeholder="e.g. Atia Sanjida Talukder">
+        </div>
+
+        <div class="input-group">
+          <label for="teacherDesig">Designation</label>
+          <input type="text" id="teacherDesig" placeholder="e.g. Lecturer">
+        </div>
+
+        <div class="input-group full-width">
+          <label for="teacherDept">Department</label>
+          <input type="text" id="teacherDept" placeholder="e.g. Cse">
+        </div>
+
+        <div class="section-title">Submitted By</div>
+        <div class="input-group">
+          <label for="studentName">Student Name</label>
+          <input type="text" id="studentName" placeholder="e.g. Jony Roy">
+        </div>
+
+        <div class="input-group">
+          <label for="studentId">Student ID</label>
+          <input type="text" id="studentId" placeholder="e.g. 262-15-952">
+        </div>
+
+        <div class="input-group">
+          <label for="section">Section</label>
+          <input type="text" id="section" placeholder="e.g. 72_J">
+        </div>
+
+        <div class="input-group">
+          <label for="semester">Semester</label>
+          <input type="text" id="semester" placeholder="e.g. Summer 2026">
+        </div>
+
+        <div class="input-group full-width">
+          <label for="studentDept">Department</label>
+          <input type="text" id="studentDept" placeholder="e.g. Cse">
+        </div>
+
+        <div class="section-title">Submission Date</div>
+        <div class="input-group full-width">
+          <label for="subDate">Date of Submission</label>
+          <input type="date" id="subDate">
+        </div>
+      </div>
+
+      <button id="generateBtn" class="primary-btn">Generate Cover Page</button>
+    </div>
   </div>
 
-  <div class="assignment-header">ASSIGNMENT</div>
 
-  <!-- COURSE INFO -->
-  <div class="course-info">
-    <p><strong class="label-title">Course Code:</strong> <span id="prevCourseCode">MAT 101</span></p>
-    <p><strong class="label-title">Course Title:</strong> <span id="prevCourseTitle">MATHEMATICS 1</span></p>
-    <p><strong class="label-title">Topic Name:</strong> <span id="prevTopicName">Continuity and Differentiability, Polynomial, Inequality, Radial and Exponent</span></p>
-  </div>
-
-  <!-- CENTER WATERMARK & DETAILS CONTAINER -->
-  <div class="watermark-container">
-    <!-- PERFECTLY CENTERED WATERMARK -->
-    <img src="Center.svg" alt="DIU Watermark" class="watermark-img">
-
-    <!-- SUBMITTED TO -->
-    <div class="submission-block">
-      <h4 class="sub-heading">Submitted To</h4>
-      <p><strong>Name:</strong> <span id="prevTeacherName">Atia Sanjida Talukder</span></p>
-      <p><strong>Designation:</strong> <span id="prevTeacherDesig">Lecturer</span></p>
-      <p><strong>Department of</strong> <span id="prevTeacherDept">Cse</span></p>
-      <p><strong>Daffodil International University</strong></p>
+  <!-- STEP 2: PREVIEW SCREEN (HIDDEN BY DEFAULT) -->
+  <div id="previewScreen" class="screen-container hidden">
+    <div class="action-bar">
+      <button id="editBtn" class="secondary-btn">← Edit Details</button>
+      <button id="downloadBtn" class="primary-btn">Download PDF</button>
     </div>
 
-    <!-- SUBMITTED BY -->
-    <div class="submission-block">
-      <h4 class="sub-heading">Submitted By</h4>
-      <p><strong>Name:</strong> <span id="prevStudentName">Jony Roy</span></p>
-      <p><strong>ID:</strong> <span id="prevStudentId">262-15-952</span></p>
-      <p><strong>Section:</strong> <span id="prevSection">72_J</span></p>
-      <p><strong>Semester:</strong> <span id="prevSemester">Summer 2026</span></p>
-      <p><strong>Department of</strong> <span id="prevStudentDept">Cse</span></p>
-      <p><strong>Daffodil International University</strong></p>
+    <!-- A4 COVER PAGE CANVAS -->
+    <div id="coverPage">
+      
+      <!-- TOP LOGO HEADER -->
+      <div class="header-logo">
+        <img src="Center.svg" alt="DIU Crest" class="top-crest-img">
+        <img src="Top.svg" alt="Daffodil International University" class="top-title-img">
+      </div>
+
+      <div class="assignment-header">ASSIGNMENT</div>
+
+      <!-- COURSE INFO -->
+      <div class="course-info">
+        <p><strong class="label-title">Course Code:</strong> <span id="prevCourseCode">MAT 101</span></p>
+        <p><strong class="label-title">Course Title:</strong> <span id="prevCourseTitle">MATHEMATICS 1</span></p>
+        <p><strong class="label-title">Topic Name:</strong> <span id="prevTopicName">Continuity and Differentiability</span></p>
+      </div>
+
+      <!-- WATERMARK & DETAILS CONTAINER -->
+      <div class="watermark-container">
+        <img src="Center.svg" alt="DIU Watermark" class="watermark-img">
+
+        <!-- SUBMITTED TO -->
+        <div class="submission-block">
+          <h4 class="sub-heading">Submitted To</h4>
+          <p><strong>Name:</strong> <span id="prevTeacherName">Atia Sanjida Talukder</span></p>
+          <p><strong>Designation:</strong> <span id="prevTeacherDesig">Lecturer</span></p>
+          <p><strong>Department of</strong> <span id="prevTeacherDept">Cse</span></p>
+          <p><strong>Daffodil International University</strong></p>
+        </div>
+
+        <!-- SUBMITTED BY -->
+        <div class="submission-block">
+          <h4 class="sub-heading">Submitted By</h4>
+          <p><strong>Name:</strong> <span id="prevStudentName">Jony Roy</span></p>
+          <p><strong>ID:</strong> <span id="prevStudentId">262-15-952</span></p>
+          <p><strong>Section:</strong> <span id="prevSection">72_J</span></p>
+          <p><strong>Semester:</strong> <span id="prevSemester">Summer 2026</span></p>
+          <p><strong>Department of</strong> <span id="prevStudentDept">Cse</span></p>
+          <p><strong>Daffodil International University</strong></p>
+        </div>
+      </div>
+
+      <!-- SUBMISSION DATE -->
+      <div class="date-pill-wrapper">
+        <div class="date-pill">
+          <strong>Date of Submission:</strong> <span id="prevSubDate">02/08/2026</span>
+        </div>
+      </div>
+
     </div>
   </div>
 
-  <!-- SUBMISSION DATE -->
-  <div class="date-pill-wrapper">
-    <div class="date-pill">
-      <strong>Date of Submission:</strong> <span id="prevSubDate">02/08/2026</span>
-    </div>
-  </div>
-
-</div>
+  <script src="script.js"></script>
+</body>
+</html>
