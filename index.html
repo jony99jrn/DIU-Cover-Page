@@ -9,7 +9,6 @@
 </head>
 <body>
 
-  <!-- STEP 1: FORM SCREEN -->
   <div id="formScreen" class="screen-container">
     <div class="form-card">
       <h2>DIU Cover Page Generator</h2>
@@ -85,21 +84,15 @@
     </div>
   </div>
 
-
-  <!-- STEP 2: PREVIEW SCREEN -->
   <div id="previewScreen" class="screen-container hidden">
     <div class="action-bar">
       <button id="editBtn" class="secondary-btn">← Edit Details</button>
       <button id="downloadBtn" class="primary-btn">Download PDF</button>
     </div>
 
-    <!-- A4 CANVAS -->
     <div id="coverPage">
-      
-      <!-- VISIBLE OUTER BORDER -->
       <div id="pageBorder">
         
-        <!-- HEADER -->
         <div class="header-logo">
           <img src="Center.svg" alt="DIU Crest" class="top-crest-img">
           <img src="Top.svg" alt="Daffodil International University" class="top-title-img">
@@ -107,14 +100,17 @@
 
         <div class="assignment-header">ASSIGNMENT</div>
 
-        <!-- COURSE INFO -->
         <div class="course-info">
           <p><strong class="label-title">Course Code:</strong> <span id="prevCourseCode">MAT 101</span></p>
           <p><strong class="label-title">Course Title:</strong> <span id="prevCourseTitle">MATHEMATICS 1</span></p>
           <p><strong class="label-title">Topic Name:</strong> <span id="prevTopicName">Continuity and Differentiability, Polynomial, Inequality, Radial and Exponent</span></p>
         </div>
 
-        <!-- SUBMITTED TO -->
+        <!-- CENTER LOGO IN THE GAP -->
+        <div class="center-logo-box">
+          <img src="Center.svg" alt="DIU Center Logo" class="center-svg-img">
+        </div>
+
         <div class="submission-block">
           <h4 class="sub-heading">Submitted To</h4>
           <p><strong class="lbl">Name:</strong> <span id="prevTeacherName">Atia Sanjida Talukder</span></p>
@@ -123,10 +119,6 @@
           <p><strong>Daffodil International University</strong></p>
         </div>
 
-        <!-- CENTER WATERMARK -->
-        <img src="Center.svg" alt="DIU Watermark" class="watermark-img">
-
-        <!-- SUBMITTED BY -->
         <div class="submission-block">
           <h4 class="sub-heading">Submitted By</h4>
           <p><strong class="lbl">Name:</strong> <span id="prevStudentName">Jony Roy</span></p>
@@ -137,7 +129,6 @@
           <p><strong>Daffodil International University</strong></p>
         </div>
 
-        <!-- SUBMISSION DATE -->
         <div class="date-pill-wrapper">
           <div class="date-pill">
             <strong>Date of Submission:</strong> <span id="prevSubDate">02/08/2026</span>
