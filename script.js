@@ -6,21 +6,21 @@ window.addEventListener('DOMContentLoaded', () => {
   const editBtn = document.getElementById('editBtn');
   const downloadBtn = document.getElementById('downloadBtn');
 
-  // Generate Cover Page
+  // Switch to Preview Screen & populate details
   generateBtn.addEventListener('click', () => {
     const courseCode = document.getElementById('courseCode').value.trim() || 'MAT 101';
     const courseTitle = document.getElementById('courseTitle').value.trim() || 'MATHEMATICS 1';
-    const topicName = document.getElementById('topicName').value.trim() || 'Continuity and Differentiability';
+    const topicName = document.getElementById('topicName').value.trim() || 'Continuity and Differentiability, Polynomial, Inequality, Radial and Exponent';
     
     const teacherName = document.getElementById('teacherName').value.trim() || 'Atia Sanjida Talukder';
     const teacherDesig = document.getElementById('teacherDesig').value.trim() || 'Lecturer';
-    const teacherDept = document.getElementById('teacherDept').value.trim() || 'Cse';
+    const teacherDept = document.getElementById('teacherDept').value.trim() || 'Computer Science and Engineering';
 
     const studentName = document.getElementById('studentName').value.trim() || 'Jony Roy';
     const studentId = document.getElementById('studentId').value.trim() || '262-15-952';
     const section = document.getElementById('section').value.trim() || '72_J';
     const semester = document.getElementById('semester').value.trim() || 'Summer 2026';
-    const studentDept = document.getElementById('studentDept').value.trim() || 'Cse';
+    const studentDept = document.getElementById('studentDept').value.trim() || 'CSE';
     
     const subDateVal = document.getElementById('subDate').value;
 
@@ -50,27 +50,26 @@ window.addEventListener('DOMContentLoaded', () => {
     window.scrollTo(0, 0);
   });
 
-  // Edit Action
+  // Switch back to Form Screen
   editBtn.addEventListener('click', () => {
     previewScreen.classList.add('hidden');
     formScreen.style.setProperty('display', 'flex', 'important');
   });
 
-  // Download PDF Action (Configured for single page rendering)
+  // Export PDF (Single Page)
   downloadBtn.addEventListener('click', () => {
     const element = document.getElementById('coverPage');
     
     const options = {
       margin: 0,
       filename: 'DIU_Assignment_Cover_Page.pdf',
-      image: { type: 'jpeg', quality: 0.98 },
+      image: { type: 'jpeg', quality: 1.0 },
       html2canvas: { 
         scale: 2, 
         useCORS: true,
         scrollY: 0
       },
-      jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
-      pagebreak: { mode: 'avoid-all' }
+      jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
     };
 
     html2pdf().set(options).from(element).save();
