@@ -6,7 +6,6 @@ window.addEventListener('DOMContentLoaded', () => {
   const editBtn = document.getElementById('editBtn');
   const downloadBtn = document.getElementById('downloadBtn');
 
-  // Generate Action
   generateBtn.addEventListener('click', () => {
     const courseCode = document.getElementById('courseCode').value.trim() || 'MAT 101';
     const courseTitle = document.getElementById('courseTitle').value.trim() || 'MATHEMATICS 1';
@@ -50,13 +49,11 @@ window.addEventListener('DOMContentLoaded', () => {
     window.scrollTo(0, 0);
   });
 
-  // Edit Action
   editBtn.addEventListener('click', () => {
     previewScreen.classList.add('hidden');
     formScreen.style.setProperty('display', 'flex', 'important');
   });
 
-  // Export PDF Action
   downloadBtn.addEventListener('click', () => {
     const element = document.getElementById('coverPage');
     
