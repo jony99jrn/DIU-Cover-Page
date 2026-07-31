@@ -9,7 +9,7 @@
 </head>
 <body>
 
-  <!-- STEP 1: FORM SCREEN (DEFAULT VISIBLE) -->
+  <!-- STEP 1: FORM SCREEN -->
   <div id="formScreen" class="screen-container">
     <div class="form-card">
       <h2>DIU Cover Page Generator</h2>
@@ -86,20 +86,20 @@
   </div>
 
 
-  <!-- STEP 2: PREVIEW SCREEN (HIDDEN BY DEFAULT) -->
+  <!-- STEP 2: PREVIEW SCREEN -->
   <div id="previewScreen" class="screen-container hidden">
     <div class="action-bar">
       <button id="editBtn" class="secondary-btn">← Edit Details</button>
       <button id="downloadBtn" class="primary-btn">Download PDF</button>
     </div>
 
-    <!-- A4 PDF CANVAS CONTAINER -->
+    <!-- A4 CANVAS -->
     <div id="coverPage">
       
-      <!-- PAGE OUTER BORDER FRAME -->
+      <!-- VISIBLE OUTER BORDER -->
       <div id="pageBorder">
         
-        <!-- TOP LOGO HEADER -->
+        <!-- HEADER -->
         <div class="header-logo">
           <img src="Center.svg" alt="DIU Crest" class="top-crest-img">
           <img src="Top.svg" alt="Daffodil International University" class="top-title-img">
@@ -114,30 +114,27 @@
           <p><strong class="label-title">Topic Name:</strong> <span id="prevTopicName">Continuity and Differentiability, Polynomial, Inequality, Radial and Exponent</span></p>
         </div>
 
-        <!-- DETAILS & WATERMARK CONTAINER -->
-        <div class="watermark-container">
-          <!-- CENTERED WATERMARK -->
-          <img src="Center.svg" alt="DIU Watermark" class="watermark-img">
+        <!-- SUBMITTED TO -->
+        <div class="submission-block">
+          <h4 class="sub-heading">Submitted To</h4>
+          <p><strong class="lbl">Name:</strong> <span id="prevTeacherName">Atia Sanjida Talukder</span></p>
+          <p><strong class="lbl">Designation:</strong> <span id="prevTeacherDesig">Lecturer</span></p>
+          <p><strong class="lbl">Department of</strong> <span id="prevTeacherDept">Computer Science and Engineering</span></p>
+          <p><strong>Daffodil International University</strong></p>
+        </div>
 
-          <!-- SUBMITTED TO -->
-          <div class="submission-block">
-            <h4 class="sub-heading">Submitted To</h4>
-            <p><strong>Name:</strong> <span id="prevTeacherName">Atia Sanjida Talukder</span></p>
-            <p><strong>Designation:</strong> <span id="prevTeacherDesig">Lecturer</span></p>
-            <p><strong>Department of</strong> <span id="prevTeacherDept">Computer Science and Engineering</span></p>
-            <p><strong>Daffodil International University</strong></p>
-          </div>
+        <!-- CENTER WATERMARK -->
+        <img src="Center.svg" alt="DIU Watermark" class="watermark-img">
 
-          <!-- SUBMITTED BY -->
-          <div class="submission-block">
-            <h4 class="sub-heading">Submitted By</h4>
-            <p><strong>Name:</strong> <span id="prevStudentName">Jony Roy</span></p>
-            <p><strong>ID:</strong> <span id="prevStudentId">262-15-952</span></p>
-            <p><strong>Section:</strong> <span id="prevSection">72_J</span></p>
-            <p><strong>Semester:</strong> <span id="prevSemester">Summer 2026</span></p>
-            <p><strong>Department of</strong> <span id="prevStudentDept">CSE</span></p>
-            <p><strong>Daffodil International University</strong></p>
-          </div>
+        <!-- SUBMITTED BY -->
+        <div class="submission-block">
+          <h4 class="sub-heading">Submitted By</h4>
+          <p><strong class="lbl">Name:</strong> <span id="prevStudentName">Jony Roy</span></p>
+          <p><strong class="lbl">ID:</strong> <span id="prevStudentId">262-15-952</span></p>
+          <p><strong class="lbl">Section:</strong> <span id="prevSection">72_J</span></p>
+          <p><strong class="lbl">Semester:</strong> <span id="prevSemester">Summer 2026</span></p>
+          <p><strong class="lbl">Department of</strong> <span id="prevStudentDept">CSE</span></p>
+          <p><strong>Daffodil International University</strong></p>
         </div>
 
         <!-- SUBMISSION DATE -->
