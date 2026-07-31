@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+window.addEventListener('DOMContentLoaded', () => {
   const formScreen = document.getElementById('formScreen');
   const previewScreen = document.getElementById('previewScreen');
 
@@ -6,26 +6,24 @@ document.addEventListener('DOMContentLoaded', () => {
   const editBtn = document.getElementById('editBtn');
   const downloadBtn = document.getElementById('downloadBtn');
 
-  // Generate Button Click
+  // Generate Cover Page
   generateBtn.addEventListener('click', () => {
-    // Read values or use default DIU placeholders
-    const courseCode = document.getElementById('courseCode').value.trim() || 'CSE 311';
-    const courseTitle = document.getElementById('courseTitle').value.trim() || 'Database Management System';
-    const topicName = document.getElementById('topicName').value.trim() || 'Relational Algebra & SQL Query Optimization';
+    const courseCode = document.getElementById('courseCode').value.trim() || 'MAT 101';
+    const courseTitle = document.getElementById('courseTitle').value.trim() || 'MATHEMATICS 1';
+    const topicName = document.getElementById('topicName').value.trim() || 'Continuity and Differentiability';
     
-    const teacherName = document.getElementById('teacherName').value.trim() || 'Dr. John Doe';
-    const teacherDesig = document.getElementById('teacherDesig').value.trim() || 'Assistant Professor';
-    const teacherDept = document.getElementById('teacherDept').value.trim() || 'Computer Science and Engineering';
+    const teacherName = document.getElementById('teacherName').value.trim() || 'Atia Sanjida Talukder';
+    const teacherDesig = document.getElementById('teacherDesig').value.trim() || 'Lecturer';
+    const teacherDept = document.getElementById('teacherDept').value.trim() || 'Cse';
 
-    const studentName = document.getElementById('studentName').value.trim() || 'Jane Smith';
-    const studentId = document.getElementById('studentId').value.trim() || '211-15-1234';
-    const section = document.getElementById('section').value.trim() || 'A';
-    const semester = document.getElementById('semester').value.trim() || 'Spring 2026';
-    const studentDept = document.getElementById('studentDept').value.trim() || 'CSE';
+    const studentName = document.getElementById('studentName').value.trim() || 'Jony Roy';
+    const studentId = document.getElementById('studentId').value.trim() || '262-15-952';
+    const section = document.getElementById('section').value.trim() || '72_J';
+    const semester = document.getElementById('semester').value.trim() || 'Summer 2026';
+    const studentDept = document.getElementById('studentDept').value.trim() || 'Cse';
     
     const subDateVal = document.getElementById('subDate').value;
 
-    // Apply values to preview elements
     document.getElementById('prevCourseCode').innerText = courseCode;
     document.getElementById('prevCourseTitle').innerText = courseTitle;
     document.getElementById('prevTopicName').innerText = topicName;
@@ -44,31 +42,35 @@ document.addEventListener('DOMContentLoaded', () => {
       const [year, month, day] = subDateVal.split('-');
       document.getElementById('prevSubDate').innerText = `${day}/${month}/${year}`;
     } else {
-      document.getElementById('prevSubDate').innerText = '05/07/2026';
+      document.getElementById('prevSubDate').innerText = '02/08/2026';
     }
 
-    // Switch View
-    formScreen.classList.add('hidden');
+    formScreen.style.setProperty('display', 'none', 'important');
     previewScreen.classList.remove('hidden');
     window.scrollTo(0, 0);
   });
 
-  // Edit Button Click
+  // Edit Action
   editBtn.addEventListener('click', () => {
     previewScreen.classList.add('hidden');
-    formScreen.classList.remove('hidden');
+    formScreen.style.setProperty('display', 'flex', 'important');
   });
 
-  // Download PDF Button Click
+  // Download PDF Action (Configured for single page rendering)
   downloadBtn.addEventListener('click', () => {
     const element = document.getElementById('coverPage');
     
     const options = {
       margin: 0,
       filename: 'DIU_Assignment_Cover_Page.pdf',
-      image: { type: 'jpeg', quality: 1.0 },
-      html2canvas: { scale: 2, useCORS: true },
-      jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+      image: { type: 'jpeg', quality: 0.98 },
+      html2canvas: { 
+        scale: 2, 
+        useCORS: true,
+        scrollY: 0
+      },
+      jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
+      pagebreak: { mode: 'avoid-all' }
     };
 
     html2pdf().set(options).from(element).save();
