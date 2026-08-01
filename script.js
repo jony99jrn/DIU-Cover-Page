@@ -10,7 +10,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const courseCode = document.getElementById('courseCode').value.trim() || 'MAT 101';
     const courseTitle = document.getElementById('courseTitle').value.trim() || 'MATHEMATICS 1';
     const topicName = document.getElementById('topicName').value.trim() || 'Continuity and Differentiability, Polynomial, Inequality, Radial and Exponent';
-    
+
     const teacherName = document.getElementById('teacherName').value.trim() || 'Atia Sanjida Talukder';
     const teacherDesig = document.getElementById('teacherDesig').value.trim() || 'Lecturer';
     const teacherDept = document.getElementById('teacherDept').value.trim() || 'Computer Science and Engineering';
@@ -20,7 +20,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const section = document.getElementById('section').value.trim() || '72_J';
     const semester = document.getElementById('semester').value.trim() || 'Summer 2026';
     const studentDept = document.getElementById('studentDept').value.trim() || 'CSE';
-    
+
     const subDateVal = document.getElementById('subDate').value;
 
     document.getElementById('prevCourseCode').innerText = courseCode;
@@ -56,7 +56,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   downloadBtn.addEventListener('click', () => {
     const element = document.getElementById('coverPage');
-    
+
     const options = {
       margin: 0,
       filename: 'DIU_Assignment_Cover_Page.pdf',
