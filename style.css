@@ -173,19 +173,17 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 12px;
-  transform: scale(1.3);
-  transform-origin: top center;
+  gap: 16px;
 }
 
 .top-crest-img {
-  height: 60px;
+  height: 85px;
   width: auto;
 }
 
 .university-title h2 {
   font-family: Arial, sans-serif;
-  font-size: 22pt;
+  font-size: 32pt;
   font-weight: 900;
   color: #0b4a8b;
   margin: 0;
@@ -194,7 +192,7 @@ body {
 
 .university-title h3 {
   font-family: 'Brush Script MT', cursive, sans-serif;
-  font-size: 14pt;
+  font-size: 20pt;
   color: #15803d;
   margin: 0;
   line-height: 1.1;
