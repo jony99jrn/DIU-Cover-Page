@@ -177,13 +177,13 @@ body {
 }
 
 .top-crest-img {
-  height: 85px;
+  height: 105px;
   width: auto;
 }
 
 .university-title h2 {
   font-family: Arial, sans-serif;
-  font-size: 32pt;
+  font-size: 42pt;
   font-weight: 900;
   color: #0b4a8b;
   margin: 0;
@@ -192,7 +192,7 @@ body {
 
 .university-title h3 {
   font-family: 'Brush Script MT', cursive, sans-serif;
-  font-size: 20pt;
+  font-size: 26pt;
   color: #15803d;
   margin: 0;
   line-height: 1.1;
