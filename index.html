@@ -10,89 +10,122 @@
 <body>
 
   <div id="formScreen" class="screen-container">
-    <div class="form-card">
-      <h2>DIU Cover Page Generator</h2>
-      <p class="subtitle">Fill in the assignment details to generate your cover page.</p>
-
-      <div class="form-grid">
-        <div class="section-title">Course Information</div>
-        <div class="input-group">
-          <label for="courseCode">Course Code</label>
-          <input type="text" id="courseCode" placeholder="e.g. MAT 101">
-        </div>
-
-        <div class="input-group">
-          <label for="courseTitle">Course Title</label>
-          <input type="text" id="courseTitle" placeholder="e.g. MATHEMATICS 1">
-        </div>
-
-        <div class="input-group full-width">
-          <label for="topicName">Topic Name</label>
-          <input type="text" id="topicName" placeholder="e.g. Continuity and Differentiability, Polynomial, Inequality, Radial and Exponent">
-        </div>
-
-        <div class="section-title">Submitted To</div>
-        <div class="input-group">
-          <label for="teacherName">Teacher Name</label>
-          <input type="text" id="teacherName" placeholder="e.g. Atia Sanjida Talukder">
-        </div>
-
-        <div class="input-group">
-          <label for="teacherDesig">Designation</label>
-          <input type="text" id="teacherDesig" placeholder="e.g. Lecturer">
-        </div>
-
-        <div class="input-group full-width">
-          <label for="teacherDept">Department</label>
-          <input type="text" id="teacherDept" placeholder="e.g. Computer Science and Engineering">
-        </div>
-
-        <div class="section-title">Submitted By</div>
-        <div class="input-group">
-          <label for="studentName">Student Name</label>
-          <input type="text" id="studentName" placeholder="e.g. Jony Roy">
-        </div>
-
-        <div class="input-group">
-          <label for="studentId">Student ID</label>
-          <input type="text" id="studentId" placeholder="e.g. 262-15-952">
-        </div>
-
-        <div class="input-group">
-          <label for="section">Section</label>
-          <input type="text" id="section" placeholder="e.g. 72_J">
-        </div>
-
-        <div class="input-group">
-          <label for="semester">Semester</label>
-          <input type="text" id="semester" placeholder="e.g. Summer 2026">
-        </div>
-
-        <div class="input-group full-width">
-          <label for="studentDept">Department</label>
-          <input type="text" id="studentDept" placeholder="e.g. CSE">
-        </div>
-
-        <div class="section-title">Submission Date</div>
-        <div class="input-group full-width">
-          <label for="subDate">Date of Submission</label>
-          <input type="date" id="subDate">
-        </div>
+    <div class="form-wrapper">
+      
+      <div class="form-header">
+        <h2>DIU Cover Page Generator</h2>
+        <p class="subtitle">Fill in the assignment details below to quickly generate your formal cover page.</p>
       </div>
 
-      <button id="generateBtn" class="primary-btn">Generate Cover Page</button>
+      <div class="form-sections">
+        
+        <!-- SECTION 1: COURSE INFORMATION -->
+        <div class="form-card-section">
+          <div class="section-header">
+            <span class="section-icon">📚</span>
+            <h3>Course Information</h3>
+          </div>
+          <div class="form-grid">
+            <div class="input-group">
+              <label for="courseCode">Course Code</label>
+              <input type="text" id="courseCode" placeholder="e.g. MAT 101">
+            </div>
+
+            <div class="input-group">
+              <label for="courseTitle">Course Title</label>
+              <input type="text" id="courseTitle" placeholder="e.g. MATHEMATICS 1">
+            </div>
+
+            <div class="input-group full-width">
+              <label for="topicName">Topic Name</label>
+              <input type="text" id="topicName" placeholder="e.g. Continuity and Differentiability, Polynomial, Inequality, Radial and Exponent">
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 2: SUBMITTED TO -->
+        <div class="form-card-section">
+          <div class="section-header">
+            <span class="section-icon">👨‍🏫</span>
+            <h3>Submitted To</h3>
+          </div>
+          <div class="form-grid">
+            <div class="input-group">
+              <label for="teacherName">Teacher Name</label>
+              <input type="text" id="teacherName" placeholder="e.g. Atia Sanjida Talukder">
+            </div>
+
+            <div class="input-group">
+              <label for="teacherDesig">Designation</label>
+              <input type="text" id="teacherDesig" placeholder="e.g. Lecturer">
+            </div>
+
+            <div class="input-group full-width">
+              <label for="teacherDept">Department</label>
+              <input type="text" id="teacherDept" placeholder="e.g. Computer Science and Engineering">
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 3: SUBMITTED BY -->
+        <div class="form-card-section">
+          <div class="section-header">
+            <span class="section-icon">🎓</span>
+            <h3>Submitted By</h3>
+          </div>
+          <div class="form-grid">
+            <div class="input-group">
+              <label for="studentName">Student Name</label>
+              <input type="text" id="studentName" placeholder="e.g. Jony Roy">
+            </div>
+
+            <div class="input-group">
+              <label for="studentId">Student ID</label>
+              <input type="text" id="studentId" placeholder="e.g. 262-15-952">
+            </div>
+
+            <div class="input-group">
+              <label for="section">Section</label>
+              <input type="text" id="section" placeholder="e.g. 72_J">
+            </div>
+
+            <div class="input-group">
+              <label for="semester">Semester</label>
+              <input type="text" id="semester" placeholder="e.g. Summer 2026">
+            </div>
+
+            <div class="input-group full-width">
+              <label for="studentDept">Department</label>
+              <input type="text" id="studentDept" placeholder="e.g. CSE">
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 4: SUBMISSION DATE -->
+        <div class="form-card-section">
+          <div class="section-header">
+            <span class="section-icon">📅</span>
+            <h3>Submission Date</h3>
+          </div>
+          <div class="form-grid">
+            <div class="input-group full-width">
+              <label for="subDate">Date of Submission</label>
+              <input type="date" id="subDate">
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <button id="generateBtn" class="primary-btn large-submit-btn">Generate Cover Page →</button>
     </div>
   </div>
 
   <div id="previewScreen" class="screen-container hidden">
-    <div class="action-bar">
-      <button id="editBtn" class="secondary-btn">← Edit Details</button>
-      <button id="downloadBtn" class="primary-btn">Download PDF</button>
-    </div>
 
     <div id="coverPage">
       <div id="pageBorder">
-        
+
         <img src="Center.svg" alt="DIU Watermark" class="watermark-bg">
 
         <div class="header-logo">
@@ -137,6 +170,13 @@
 
       </div>
     </div>
+
+    <!-- ACTION BUTTONS MOVED TO THE BOTTOM & ENLARGED -->
+    <div class="action-bar bottom-action-bar">
+      <button id="editBtn" class="secondary-btn action-btn-large">← Edit Details</button>
+      <button id="downloadBtn" class="primary-btn action-btn-large">Download PDF 📥</button>
+    </div>
+
   </div>
 
   <script src="script.js"></script>
